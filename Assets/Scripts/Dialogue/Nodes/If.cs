@@ -22,8 +22,8 @@ namespace Dialogue.Logical
             // Perform condition
             bool pass = false;
             foreach (Condition condition in conditions) {
-                string value1 = (string)(graph as BaseDialogueGraph).getVariable(condition.variable1);
-                string value2 = condition.var_2_is_value ? condition.variable2 : (string)(graph as BaseDialogueGraph).getVariable(condition.variable2);
+                string value1 = (string)(graph as DialogueGraph).getVariable(condition.variable1);
+                string value2 = condition.var_2_is_value ? condition.variable2 : (string)(graph as DialogueGraph).getVariable(condition.variable2);
 
                 switch (condition.operation)
                 {

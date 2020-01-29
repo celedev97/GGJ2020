@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using XNodeEditor;
-/*
+
 namespace DialogueEditor {
     [CustomNodeEditor(typeof(Dialogue.Functional.Event))]
     public class EventEditor : NodeEditor {
@@ -17,10 +17,10 @@ namespace DialogueEditor {
             NodeEditorGUILayout.PortField(target.GetOutputPort("output"), GUILayout.Width(100));
             GUILayout.EndHorizontal();
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("trigger"));
-        }*//*
+        }*/
 
         public override int GetWidth() {
             return 336;
         }
     }
-}*/
+}

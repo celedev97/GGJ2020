@@ -37,7 +37,7 @@ namespace Dialogue.Logical
             else {
                 if (value_is_var)
                 {
-                    value = (graph as BaseDialogueGraph).getVariable(this.value);
+                    value = (graph as DialogueGraph).getVariable(this.value);
                 }
                 else
                 {
@@ -47,19 +47,19 @@ namespace Dialogue.Logical
             switch (operation)
             {
                 case Operation.assign:
-                    (graph as BaseDialogueGraph).saveVariable(variable_name, value);
+                    (graph as DialogueGraph).saveVariable(variable_name, value);
                     break;
                 case Operation.add:
-                    (graph as BaseDialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as BaseDialogueGraph).getVariable(variable_name)) + int.Parse((string)value)));
+                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) + int.Parse((string)value)));
                     break;
                 case Operation.subtract:
-                    (graph as BaseDialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as BaseDialogueGraph).getVariable(variable_name)) - int.Parse((string)value)));
+                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) - int.Parse((string)value)));
                     break;
                 case Operation.multiply:
-                    (graph as BaseDialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as BaseDialogueGraph).getVariable(variable_name)) * int.Parse((string)value)));
+                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) * int.Parse((string)value)));
                     break;
                 case Operation.divide:
-                    (graph as BaseDialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as BaseDialogueGraph).getVariable(variable_name)) / int.Parse((string)value)));
+                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) / int.Parse((string)value)));
                     break;
                 default:
                     break;

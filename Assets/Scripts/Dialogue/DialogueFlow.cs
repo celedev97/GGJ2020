@@ -11,7 +11,7 @@ using System;
 
 public class DialogueFlow : MonoBehaviour
 {
-    public BaseDialogueGraph dialogue;
+    public DialogueGraph dialogue;
     public GameObject decorations;
     private TextInputManager textInputManager;
     public Dictionary<string, object> variables = new Dictionary<string, object>();
@@ -113,12 +113,12 @@ public class DialogueFlow : MonoBehaviour
             #endregion
         }
         #endregion
-        /*#region EVENT
+        #region EVENT
         else if (dialogue.current.GetType() == typeof(Dialogue.Functional.Event))
         {
             dialogue.current.Trigger();
             Flow();
         }
-        #endregion*/
+        #endregion
     }
 }
