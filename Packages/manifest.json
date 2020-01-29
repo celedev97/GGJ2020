@@ -4,6 +4,7 @@
     "com.unity.2d.pixel-perfect": "2.0.4",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.2d.tilemap.extras": "https://github.com/Unity-Technologies/2d-extras.git#master",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ext.nunit": "1.0.0",
     "com.unity.ide.rider": "1.1.4",
@@ -48,6 +49,10 @@
     "com.github.siccity.xnode": {
       "revision": "HEAD",
       "hash": "7e93ffe4b75a6cab453223d20c5e03f4d7c57f7f"
+    },
+    "com.unity.2d.tilemap.extras": {
+      "revision": "master",
+      "hash": "a95c07ac963132f767842418cb3b7c260d9c8cad"
     }
   }
 }
