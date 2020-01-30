@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - PlayerTrigger
   - 
   - 
   - 
@@ -41,15 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3493023829
-    locked: 0
-  - name: Ground
-    uniqueID: 3796937743
-    locked: 0
   - name: Items
     uniqueID: 2315396939
     locked: 0
-  - name: Decorations
-    uniqueID: 4287232005
+  - name: Player
+    uniqueID: 3493023829
     locked: 0
