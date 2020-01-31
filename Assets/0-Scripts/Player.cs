@@ -10,8 +10,14 @@ public class Player : MonoBehaviour
 
     private void Start() {
         //initializing public static things, so i can access the player from every other object without the need to use GetComponent<>
-        gameObject = base.gameObject;
-        player = this;
+        if (player)
+        {
+            Destroy(base.gameObject);
+        }
+        else {
+            gameObject = base.gameObject;
+            player = this;
+        }
     }
 
 
