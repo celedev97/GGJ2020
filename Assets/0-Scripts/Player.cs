@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
             Destroy(base.gameObject);
         }
         else {
+            DontDestroyOnLoad(base.gameObject);
             gameObject = base.gameObject;
             player = this;
         }
