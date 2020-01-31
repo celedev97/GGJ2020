@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: water_41
+  m_Name: water41
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
   - {fileID: -6920994997354161350, guid: 73035c9d48c5b6544bef9c5eb4c2ca59, type: 3}
@@ -21,4 +21,4 @@ MonoBehaviour:
   m_MaxSpeed: 4
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 0
+  m_TileColliderType: 2
