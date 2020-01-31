@@ -7,7 +7,7 @@ using XNodeEditor;
 
 namespace DialogueEditor {
     [CustomNodeEditor(typeof(Dialogue.Logical.If))]
-    public class BranchEditor : NodeEditor {
+    public class IfEditor : NodeEditor {
         public override int GetWidth() {
             return 336;
         }

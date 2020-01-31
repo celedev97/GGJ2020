@@ -5,8 +5,6 @@ namespace Dialogue.Logical
     [NodeTint("#ffbcf3")]
     public class SaveData : DialogueBaseNode
     {
-        [Input] public Connection input;
-        [Output] public Connection output;
 
         public bool node_input = false;
 
@@ -37,7 +35,7 @@ namespace Dialogue.Logical
             else {
                 if (value_is_var)
                 {
-                    value = (graph as DialogueGraph).getVariable(this.value);
+                    value = Game.GetVariable(this.value);
                 }
                 else
                 {
@@ -47,24 +45,24 @@ namespace Dialogue.Logical
             switch (operation)
             {
                 case Operation.assign:
-                    (graph as DialogueGraph).saveVariable(variable_name, value);
+                    Game.SaveVariable(variable_name, value);
                     break;
                 case Operation.add:
-                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) + int.Parse((string)value)));
+                    Game.SaveVariable(variable_name, "" + (int.Parse((string)Game.GetVariable(variable_name)) + int.Parse((string)value)));
                     break;
                 case Operation.subtract:
-                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) - int.Parse((string)value)));
+                    Game.SaveVariable(variable_name, "" + (int.Parse((string)Game.GetVariable(variable_name)) - int.Parse((string)value)));
                     break;
                 case Operation.multiply:
-                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) * int.Parse((string)value)));
+                    Game.SaveVariable(variable_name, "" + (int.Parse((string)Game.GetVariable(variable_name)) * int.Parse((string)value)));
                     break;
                 case Operation.divide:
-                    (graph as DialogueGraph).saveVariable(variable_name, "" + (int.Parse((string)(graph as DialogueGraph).getVariable(variable_name)) / int.Parse((string)value)));
+                    Game.SaveVariable(variable_name, "" + (int.Parse((string)Game.GetVariable(variable_name)) / int.Parse((string)value)));
                     break;
                 default:
                     break;
             }
-            goToOutput();
+            (GetOutputPort("output").Connection.node as DialogueBaseNode).Trigger();
         }
         
     }

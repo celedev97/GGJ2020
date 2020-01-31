@@ -3,13 +3,13 @@ using XNode;
 
 namespace Dialogue {
 	public abstract class DialogueBaseNode : Node {
-		abstract public void Trigger();
+		[Input(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Inherited)] public DialogueBaseNode input;
+		[Output(backingValue = ShowBackingValue.Never)] public DialogueBaseNode output;
 
-		[System.Serializable] public class Connection { }
+        abstract public void Trigger();
 
-        protected void goToOutput() {
-            (graph as DialogueGraph).current = this;
-            (GetOutputPort("output").Connection.node as DialogueBaseNode).Trigger();
-        }
-    }
+		public override object GetValue(NodePort port) {
+			return null;
+		}
+	}
 }

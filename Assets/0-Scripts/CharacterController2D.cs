@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour {
 
-    [Range(.1f,10)]
+    [Range(.1f, 10)]
     public float speed = 1;
+
+    public bool canMove = true;
 
     #region Private Variables
     private Rigidbody2D rigid;
@@ -24,12 +26,19 @@ public class CharacterController2D : MonoBehaviour {
             animator.SetFloat("horizontal", direction.x);
             animator.SetFloat("vertical", direction.y);
         }
+
+        if (!canMove) {
+            direction = Vector2.zero;
+        }
+
         //normalizing vector (avoid diagonal faster movement)
         if (direction.magnitude > 1) {
             direction = direction.normalized;
         }
+
         //setting speed for animator
         animator.SetFloat("speed", direction.sqrMagnitude);
+
         //effectively moving the object
         rigid.MovePosition(rigid.position + direction * speed * timeMultiplier);
     }

@@ -12,9 +12,8 @@ namespace Dialogue.Logical
     [NodeTint("#CCCCFF")]
     public class If : DialogueBaseNode
     {
-        [Input] public Connection input;
-        [Output] public Connection pass;
-        [Output] public Connection fail;
+        [Output] public DialogueBaseNode pass;
+        [Output] public DialogueBaseNode fail;
         public Condition[] conditions;
 
         public override void Trigger()
@@ -22,8 +21,8 @@ namespace Dialogue.Logical
             // Perform condition
             bool pass = false;
             foreach (Condition condition in conditions) {
-                string value1 = (string)(graph as DialogueGraph).getVariable(condition.variable1);
-                string value2 = condition.var_2_is_value ? condition.variable2 : (string)(graph as DialogueGraph).getVariable(condition.variable2);
+                string value1 = (string)Game.GetVariable(condition.variable1);
+                string value2 = condition.var_2_is_value ? condition.variable2 : (string)Game.GetVariable(condition.variable2);
 
                 switch (condition.operation)
                 {
