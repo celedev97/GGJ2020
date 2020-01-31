@@ -15,7 +15,7 @@ public class LinkToLevel : MonoBehaviour {
 
     private void TeleportToSpawnPoint(Scene arg0, LoadSceneMode arg1)
     {
-        Debug.Log("Teleporting to: " + spawnID);
+        Debug.Log("Teleporting " + Player.gameObject + " to: " + spawnID + "("+ +")");
         Player.gameObject.transform.position = GameObject.Find(spawnID).transform.position;
     }
 }
