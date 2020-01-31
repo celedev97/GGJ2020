@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: rock
+  m_Name: water11
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1184164475401710011, guid: 73035c9d48c5b6544bef9c5eb4c2ca59, type: 3}
-  - {fileID: -8960888600935170640, guid: e6f4bacaa59b17d42bcb41ed78601413, type: 3}
-  - {fileID: -8960888600935170640, guid: 048118a0bdd2ee749a45dd9958aa10e6, type: 3}
-  - {fileID: -8960888600935170640, guid: dc109bc22eb48134587e2f6ad83cbe96, type: 3}
+  - {fileID: 7388465334667558847, guid: 73035c9d48c5b6544bef9c5eb4c2ca59, type: 3}
+  - {fileID: -3222657907275693021, guid: e6f4bacaa59b17d42bcb41ed78601413, type: 3}
+  - {fileID: 1821458425447473299, guid: 048118a0bdd2ee749a45dd9958aa10e6, type: 3}
+  - {fileID: 7943511120644435686, guid: dc109bc22eb48134587e2f6ad83cbe96, type: 3}
   m_MinSpeed: 4
   m_MaxSpeed: 4
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 2
+  m_TileColliderType: 0
