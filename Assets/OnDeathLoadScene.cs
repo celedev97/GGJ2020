@@ -9,7 +9,10 @@ public class OnDestroyLoadScene : MonoBehaviour
     public string spawnID;
 
     private void OnDestroy() {
-        Game.loadScene(scene_name, spawnID);
+        Killable killable = GetComponent<Killable>();
+        if (killable && killable.hp == 0) {
+            Game.loadScene(scene_name, spawnID);
+        }
     }
 
 }
