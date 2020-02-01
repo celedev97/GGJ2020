@@ -9,8 +9,10 @@ public class ScreenOverlay : MonoBehaviour
     public static Text dialogueText;
 
     private void Start() {
-        dialogue = transform.Find("Dialogue").gameObject;
-        dialogueText = dialogue.transform.Find("Text").GetComponent<Text>();
-        dialogue.SetActive(false);
+        if (!dialogue) {
+            dialogue = transform.Find("Dialogue").gameObject;
+            dialogueText = dialogue.transform.Find("Text").GetComponent<Text>();
+            dialogue.SetActive(false);
+        }
     }
 }
