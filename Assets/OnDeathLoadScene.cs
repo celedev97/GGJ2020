@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnDestroyLoadScene : MonoBehaviour
+public class OnDeathLoadScene : MonoBehaviour
 {
     public string scene_name;
     public string spawnID;

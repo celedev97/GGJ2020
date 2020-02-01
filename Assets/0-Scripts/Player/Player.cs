@@ -165,7 +165,7 @@ public class Player : Killable {
                     GameObject arrow =
                         GameObject.Instantiate(
                             Resources.Load("Prefabs/arrow"),
-                            transform.position + controller.direction,
+                            transform.position + controller.direction * .5f,
                             Quaternion.FromToRotation(Vector3.up, controller.direction)) as GameObject;
                     arrow.GetComponent<Projectile>().direction = controller.direction;
                     break;

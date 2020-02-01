@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/TestGround 1.unity
-    guid: fc0333f4f4fa41b46bc9f33f936f7834
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: f41dcc526498a2d44856bd85179ecf66
@@ -23,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BSOD.unity
     guid: 147b62e1fc03c5648a66d7ae18699674
+  - enabled: 1
+    path: Assets/Scenes/Aroc.unity
+    guid: 5934a313b42d7664680a5e8c752bb62e
   m_configObjects: {}
