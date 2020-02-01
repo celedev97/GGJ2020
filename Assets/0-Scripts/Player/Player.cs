@@ -25,7 +25,18 @@ public class Player : Killable {
 
 
 
-    #region Sword attack vars and props
+    #region Attacks
+
+    public enum Weapon {
+        NONE,
+        SWORD,
+        BWO,
+        BOW
+    }
+
+
+    public Weapon weapon = Weapon.NONE;
+
     private float nextAttackTime = 0;
     public float attackCooldown = 1;
     private bool canAttack { get { return Time.time > nextAttackTime; } }
@@ -114,20 +125,56 @@ public class Player : Killable {
         #endregion
         #region Attack
         if (Input.GetButtonDown("Jump") && !dialogue && canAttack) {
-            animator.SetTrigger("attack");
             nextAttackTime = Time.time + attackCooldown;
+            switch (weapon) {
+                case Weapon.SWORD:
+                    animator.SetTrigger("attack");
 
-            if (controller.direction == Vector3.right) {
-                player.sword_hitbox_right.enabled = true;
-            } else if (controller.direction == Vector3.left) {
-                player.sword_hitbox_left.enabled = true;
-            } else if (controller.direction == Vector3.up) {
-                player.sword_hitbox_up.enabled = true;
-            } else if (controller.direction == Vector3.down) {
-                player.sword_hitbox_down.enabled = true;
+                    if (controller.direction == Vector3.right) {
+                        player.sword_hitbox_right.enabled = true;
+                    } else if (controller.direction == Vector3.left) {
+                        player.sword_hitbox_left.enabled = true;
+                    } else if (controller.direction == Vector3.up) {
+                        player.sword_hitbox_up.enabled = true;
+                    } else if (controller.direction == Vector3.down) {
+                        player.sword_hitbox_down.enabled = true;
+                    }
+
+                    StartCoroutine(deactivateSwordHitBoxes());
+                    break;
+
+                case Weapon.BWO:
+                    GameObject.Destroy(
+                        GameObject.Instantiate(
+                            Resources.Load("Prefabs/bwo"),
+                            transform.position + controller.direction*.5f,
+                            Quaternion.FromToRotation(Vector3.right, controller.direction)
+                            ),
+                        .5f
+                    );
+                    GameObject arrwo =
+                        GameObject.Instantiate(
+                            Resources.Load("Prefabs/arrow"),
+                            transform.position + controller.direction,
+                            Quaternion.FromToRotation(Vector3.up, controller.direction)) as GameObject;
+                    arrwo.GetComponent<Projectile>().direction = Quaternion.Euler(0, 0, Random.Range(-30, 31) )* controller.direction;
+                    break;
+                case Weapon.BOW:
+                    GameObject bow = GameObject.Instantiate(
+                            Resources.Load("Prefabs/bow"),
+                            transform.position + controller.direction,
+                            Quaternion.FromToRotation(Vector3.right, controller.direction)
+                            ) as GameObject;
+                    bow.transform.parent = transform;
+                    GameObject.Destroy(bow,.5f);
+                    GameObject arrow =
+                        GameObject.Instantiate(
+                            Resources.Load("Prefabs/arrow"),
+                            transform.position + controller.direction,
+                            Quaternion.FromToRotation(Vector3.up, controller.direction)) as GameObject;
+                    arrow.GetComponent<Projectile>().direction = controller.direction;
+                    break;
             }
-
-            StartCoroutine(deactivateSwordHitBoxes());
         }
         #endregion
 

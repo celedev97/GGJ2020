@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  weapon: 0
   attackCooldown: 1
   sword_hitbox_up: {fileID: 2274169145080954582}
   sword_hitbox_down: {fileID: 1822320069677546794}
@@ -819,7 +820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7048186341420013107
 RectTransform:
   m_ObjectHideFlags: 0
