@@ -121,6 +121,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &166438419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7048186340047340726, guid: 86b82e25d1bde9245be538ca88301e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 3186297920237141627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &166438421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166438419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 16
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 384, y: 216}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!1 &420174374
 GameObject:
   m_ObjectHideFlags: 0
@@ -32515,6 +32543,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.046296295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.2777778
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9739583
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013107, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.02604167
+      objectReference: {fileID: 0}
     - target: {fileID: 7048186341420013117, guid: 86b82e25d1bde9245be538ca88301e29,
         type: 3}
       propertyPath: m_Sprite
@@ -32549,6 +32617,11 @@ PrefabInstance:
     - target: {fileID: 7048186341420013117, guid: 86b82e25d1bde9245be538ca88301e29,
         type: 3}
       propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048186341420013117, guid: 86b82e25d1bde9245be538ca88301e29,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
