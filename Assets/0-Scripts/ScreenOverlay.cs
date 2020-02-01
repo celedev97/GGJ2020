@@ -11,5 +11,6 @@ public class ScreenOverlay : MonoBehaviour
     private void Start() {
         dialogue = transform.Find("Dialogue").gameObject;
         dialogueText = dialogue.transform.Find("Text").GetComponent<Text>();
+        dialogue.SetActive(false);
     }
 }
