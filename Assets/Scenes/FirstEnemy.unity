@@ -36602,5 +36602,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719bef40e9f23e7468683e4e70ae4c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene_name: Intro
-  spawnID: spawn_cave
+  scene_name: BSOD
+  spawnID: spawn
