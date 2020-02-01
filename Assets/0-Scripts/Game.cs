@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Game : MonoBehaviour {
     public static Dictionary<string, object> variables = new Dictionary<string, object>();
@@ -33,7 +34,11 @@ public class Game : MonoBehaviour {
         return GetVariable(variable_name);
     }
 
-
-
-
+    private static string lastLog = "";
+    internal static void Log(string log) {
+        if (log != lastLog) {
+            Debug.Log(log);
+            lastLog = log;
+        }
+    }
 }

@@ -8,10 +8,11 @@ public class Octo : MonoBehaviour {
 
     public GameObject projectile;
 
-    private Vector2 direction;
+    private Vector2 movement;
     private float xDiff, yDiff, absX, absY;
 
     private CharacterController2D controller;
+    private Animator animator;
 
     private float nextShoot;
 
@@ -25,6 +26,7 @@ public class Octo : MonoBehaviour {
 
     private void Start() {
         controller = GetComponent<CharacterController2D>();
+        animator = GetComponent<Animator>();
         nextShoot = Time.time;
     }
 
@@ -36,35 +38,38 @@ public class Octo : MonoBehaviour {
         absX = Mathf.Abs(xDiff);
         absY = Mathf.Abs(yDiff);
 
-        direction = Vector2.zero;
-
-
+        movement = Vector2.zero;
         if (absY < absX) {
-            if (absY < shootDistance && canShoot) {
+            if (absY < shootDistance) {
                 Vector3 projectileDirection = new Vector3(xDiff, 0);
-                Shoot(projectileDirection);
+                controller.Turn(projectileDirection);
+                if (canShoot) {
+                    Shoot(projectileDirection);
+                }
             } else {
-                Debug.Log("Aligning Y");
-                //follow on y
-                controller.Move(new Vector2(0, yDiff), Time.fixedDeltaTime);
+                movement = new Vector2(0, yDiff);
             }
         } else {
-            if (absX < shootDistance && Time.time > nextShoot) {
+            if (absX < shootDistance) {
                 Vector3 projectileDirection = new Vector3(0, yDiff);
-                //shoot
-                Debug.Log("SHOOTING: " + projectileDirection);
-                //reset timer
-                nextShoot = Time.time + shootCooldown;
-            } else {
-                Debug.Log("Aligning X");
-                //follow on y
-                controller.Move(new Vector2(xDiff, 0), Time.fixedDeltaTime);
+                controller.Turn(projectileDirection);
+                if (canShoot) {
+                    Shoot(projectileDirection);
+                }
+            } else  {
+                movement = new Vector2(xDiff, 0);
             }
         }
+        //effectively moving the octo
+        controller.Move(movement, Time.fixedDeltaTime);
+
+        
+
     }
 
 
     private void Shoot(Vector3 direction) {
+        animator.SetTrigger("attack");
         //shoot
         Debug.Log("SHOOTING: " + direction);
         //reset timer
