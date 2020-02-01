@@ -31,10 +31,14 @@ public class CharacterController2D : MonoBehaviour {
                     if (direction.x > 0) {
                         transform.rotation = Quaternion.Euler(0, 0, 90);
                     } else {
+                        transform.rotation = Quaternion.Euler(0, 0, -90);
+                    }
+                } else {
+                    if (direction.y > 0) {
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                    } else {
                         transform.rotation = Quaternion.Euler(0, 0, 180);
                     }
-                } else { 
-                
                 }
             } else {
                 animator.SetFloat("horizontal", direction.x);
