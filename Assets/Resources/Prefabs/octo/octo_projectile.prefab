@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4745862090927622664}
   - component: {fileID: 2859831688146155405}
   - component: {fileID: 6563643243698339841}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: octo_projectile
   m_TagString: Damage
   m_Icon: {fileID: 0}

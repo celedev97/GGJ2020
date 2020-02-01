@@ -18,8 +18,8 @@ TagManager:
   - PlayerTrigger
   - Dialogue
   - Enemy
-  - EnemyTrigger
-  - 
+  - PlayerProjectile
+  - EnemyProjectile
   - 
   - 
   - 
