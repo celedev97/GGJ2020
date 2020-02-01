@@ -2204,10 +2204,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878710597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f258bc8fbf82144a9c65774cdef5a03, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a171cd762148104283954f9fc937950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: eaf72e8b2d8a96b49b705c59baf73975, type: 2}
+  afterDialogueEvent:
+    _target: {fileID: 1878710601}
+    _methodName: changeWeapon
+    _args:
+    - boolValue: 0
+      intValue: 0
+      floatValue: 0
+      stringValue: SWORD
+      objectValue: {fileID: 0}
+      argType: 4
+    _dynamic: 0
+    _typeName: SerializableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    dirty: 0
+  dialogues:
+  - IT'S DANGEROUS TO GO ALONE. TAKE THIS!
 --- !u!1 &1979694322
 GameObject:
   m_ObjectHideFlags: 0
