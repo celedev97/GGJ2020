@@ -4,18 +4,40 @@ using UnityEngine;
 
 public class Bug : Killable
 {
-    public float seedChange = 0;
+    private float seedChangeTime = 0;
 
     public float minSeedTime = .3f;
     public float maxSeedTime = 2f;
 
-    public float minSeed = 1;
-    public float maxSeed = 4;
+    private Animator animator;
+    public CharacterController2D controller;
 
 
     private void Start() {
         Random.InitState ((int)(Time.time * Time.deltaTime * 1000));
-        seedChange = Time.time + Random.Range(minSeedTime, maxSeedTime);
+        animator = GetComponent<Animator>();
+        controller = GetComponent<CharacterController2D>();
     }
+
+    public void Update() {
+        if (Time.time > seedChangeTime) {
+            //Debug.Log("SEED CHANGE.");
+
+            //changing animation seed
+            animator.SetFloat("seed", Random.Range(0, 1f));
+
+            //random rotation
+            transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 5) * 90);
+
+            //setting time for next seed change
+            seedChangeTime = Time.time + Random.Range(minSeedTime, maxSeedTime);
+        }
+    }
+
+    public void FixedUpdate() {
+        controller.Move(Player.gameObject.transform.position - transform.position, Time.fixedDeltaTime);
+    }
+
+
 
 }

@@ -9,15 +9,19 @@ public class Killable : MonoBehaviour
     public int hp = 1;
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.transform.parent == transform) return;
         checkHit(collision.collider);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {checkHit(collision);}
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.transform.parent == transform) return;
+        checkHit(collision);
+    }
 
     private void checkHit(Collider2D collision) {
         if (collision.tag == "Damage") {
             hp--;
-            Debug.Log(gameObject + " has been hit by "+ collision.gameObject);
+            Debug.Log(gameObject.name + " has been hit by "+ collision.name);
             collision.enabled = false;
             if (hp == 0) {
                 Debug.Log(gameObject + " dead!");
