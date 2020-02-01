@@ -70,7 +70,6 @@ public class Octo : Killable {
     private void Shoot(Vector3 direction) {
         animator.SetTrigger("attack");
         //shoot
-        Debug.Log("SHOOTING: " + direction);
         GameObject.Instantiate(projectile, transform.position + direction.normalized, Quaternion.identity);
         projectile.GetComponent<Projectile>().direction = direction;
         //reset timer

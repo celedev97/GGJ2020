@@ -13,7 +13,26 @@ public class Player : Killable {
 
     #region Private useful components
     private CharacterController2D controller;
-    private Dialogue dialogue = null;
+    public Dialogue dialogue { get { return _dialogue; } 
+        set {
+            _dialogue = value;
+            if (value) {
+                //stopping time
+                Time.timeScale = 0;
+                //turning on chatbox
+                ScreenOverlay.dialogue.SetActive(true);
+                //activating dialogue
+                ScreenOverlay.dialogueText.text = dialogue.next;
+            } else {
+                //resuming
+                Time.timeScale = 1;
+                //turning off chatbox
+                ScreenOverlay.dialogue.SetActive(false);
+            }
+            
+        }
+    }
+    public Dialogue _dialogue = null;
     private Animator animator;
     #endregion
 
@@ -90,22 +109,12 @@ public class Player : Killable {
                 ScreenOverlay.dialogueText.text = next;
             } else {
                 dialogue = null;
-                //resuming time
-                Time.timeScale = 1;
-                //turning off chatbox
-                ScreenOverlay.dialogue.SetActive(false);
             }
         } else if (Input.GetButtonDown("Submit")) {
             //the player is trying to start a dialogue, look for npcs
             Collider2D collider = Physics2D.Raycast(transform.position, controller.direction, 2).collider;
             if (collider && (dialogue = collider.GetComponent<Dialogue>())) {
                 Debug.Log("Talk to " + collider.gameObject);
-                //stopping time
-                Time.timeScale = 0;
-                //turning on chatbox
-                ScreenOverlay.dialogue.SetActive(true);
-                //activating dialogue
-                ScreenOverlay.dialogueText.text = dialogue.next;
             }
         }
         #endregion

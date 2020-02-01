@@ -19,7 +19,7 @@ public class Killable : MonoBehaviour
     }
 
     private void checkHit(Collider2D collision) {
-        if (collision.tag == "Damage") {
+        if (collision.tag == "Damage" && gameObject.layer != collision.gameObject.layer) {
             hp--;
             Debug.Log(gameObject.name + " has been hit by "+ collision.name);
             collision.enabled = false;
