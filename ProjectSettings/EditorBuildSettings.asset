@@ -5,13 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/TestGround.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/TestGround 1.unity
+    guid: fc0333f4f4fa41b46bc9f33f936f7834
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: f41dcc526498a2d44856bd85179ecf66
   - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: 3793fed98a1879341a32a59f847e2f57
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
-    guid: f41dcc526498a2d44856bd85179ecf66
+    path: Assets/Scenes/FirstEnemy.unity
+    guid: c5f2af9da66c7ff48ad564c0f75b6d0c
+  - enabled: 1
+    path: Assets/Scenes/BSOD.unity
+    guid: 147b62e1fc03c5648a66d7ae18699674
   m_configObjects: {}
