@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Dialogue;
 using UnityEngine.SceneManagement;
 
 public class Player : Killable {
@@ -14,7 +13,7 @@ public class Player : Killable {
 
     #region Private useful components
     private CharacterController2D controller;
-    private DialogueGraph dialogue = null;
+    private Dialogue dialogue = null;
     private Animator animator;
     #endregion
 
@@ -85,41 +84,28 @@ public class Player : Killable {
         inputDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         #region Talk
-        if (dialogue) {
-            //movimento scelte???
-
-            //conferma
-            if (Input.GetButtonDown("Submit")) {
-                Dialogue.Chat before = dialogue.current;
-                before.AnswerQuestion(0);
-                if (dialogue.current != before) {
-                    dialogue.current.Trigger();
-                } else {
-                    dialogue = null;
-                    //resuming time
-                    Time.timeScale = 1;
-                    //turning off chatbox
-                    ScreenOverlay.dialogue.SetActive(false);
-                }
+        if (dialogue && Input.GetButtonDown("Submit")) {
+            string next = dialogue.next;
+            if (next != null) {
+                ScreenOverlay.dialogueText.text = next;
+            } else {
+                dialogue = null;
+                //resuming time
+                Time.timeScale = 1;
+                //turning off chatbox
+                ScreenOverlay.dialogue.SetActive(false);
             }
-
         } else if (Input.GetButtonDown("Submit")) {
             //the player is trying to start a dialogue, look for npcs
             Collider2D collider = Physics2D.Raycast(transform.position, controller.direction, 2).collider;
-            TalkNPC npc;
-            if (collider && (npc = collider.GetComponent<TalkNPC>())) {
+            if (collider && (dialogue = collider.GetComponent<Dialogue>())) {
                 Debug.Log("Talk to " + collider.gameObject);
-                //dialogue
-                dialogue = npc.dialogue;
-                dialogue.Restart();
-
                 //stopping time
                 Time.timeScale = 0;
                 //turning on chatbox
                 ScreenOverlay.dialogue.SetActive(true);
-
                 //activating dialogue
-                dialogue.current.Trigger();
+                ScreenOverlay.dialogueText.text = dialogue.next;
             }
         }
         #endregion
