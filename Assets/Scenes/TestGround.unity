@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7010f43920ebe9418aa5e155c94bbc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 1
   shootDistance: 0.05
   shootCooldown: 2
   projectile: {fileID: 0}
@@ -256,6 +257,7 @@ MonoBehaviour:
   speed: 1
   canMove: 1
   rotable: 1
+  direction: {x: 0, y: 0}
 --- !u!58 &43824284
 CircleCollider2D:
   m_ObjectHideFlags: 0
