@@ -9,6 +9,8 @@ public class CharacterController2D : MonoBehaviour {
 
     public bool canMove = true;
 
+    public bool rotable = false;
+
     #region Private Variables
     private Rigidbody2D rigid;
     private Animator animator;
@@ -23,8 +25,21 @@ public class CharacterController2D : MonoBehaviour {
     public void Move(Vector2 direction, float timeMultiplier = 1) {
         //setting direction for animator
         if (direction != Vector2.zero) {
-            animator.SetFloat("horizontal", direction.x);
-            animator.SetFloat("vertical", direction.y);
+            if (rotable) {
+                float absX = Mathf.Abs(direction.x), absY = Mathf.Abs(direction.y);
+                if (absX > absY) {
+                    if (direction.x > 0) {
+                        transform.rotation = Quaternion.Euler(0, 0, 90);
+                    } else {
+                        transform.rotation = Quaternion.Euler(0, 0, 180);
+                    }
+                } else { 
+                
+                }
+            } else {
+                animator.SetFloat("horizontal", direction.x);
+                animator.SetFloat("vertical", direction.y);
+            }
         }
 
         if (!canMove) {
