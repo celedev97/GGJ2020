@@ -41,4 +41,12 @@ public class Game : MonoBehaviour {
             lastLog = log;
         }
     }
+
+    public static bool AnimatorHasParameter(Animator animator, string paramName) {
+        foreach (AnimatorControllerParameter param in animator.parameters) {
+            if (param.name == paramName)
+                return true;
+        }
+        return false;
+    }
 }

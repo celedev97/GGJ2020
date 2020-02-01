@@ -12,6 +12,8 @@ public class CharacterController2D : MonoBehaviour {
 
     public bool rotable = false;
 
+    public Vector2 direction;
+
     #region Private Variables
     private Rigidbody2D rigid;
     private Animator animator;
@@ -23,24 +25,28 @@ public class CharacterController2D : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
-    public void Move(Vector2 direction, float timeMultiplier = 1) {
+    public void Move(Vector2 moveDirection, float timeMultiplier = 1) {
         //setting direction for animator
-        if (direction != Vector2.zero) {
-            Turn(direction);
+        if (moveDirection != Vector2.zero) {
+            //normalizing vector (avoid diagonal faster movement, and ignore input smoothing)
+            moveDirection = moveDirection.normalized;
+
+            direction = moveDirection;
+            //turn character in the right direction
+            Turn(moveDirection);
         }
 
         if (!canMove) {
-            direction = Vector2.zero;
+            moveDirection = Vector2.zero;
         }
 
-        //normalizing vector (avoid diagonal faster movement, and ignore input smoothing)
-        direction = direction.normalized;
+        
 
         //setting speed for animator
-        animator.SetFloat("speed", direction.sqrMagnitude);
+        animator.SetFloat("speed", moveDirection.sqrMagnitude);
 
         //effectively moving the object
-        rigid.MovePosition(rigid.position + direction * speed * timeMultiplier);
+        rigid.MovePosition(rigid.position + moveDirection * speed * timeMultiplier);
     }
 
     internal void Turn(Vector2 direction) {
