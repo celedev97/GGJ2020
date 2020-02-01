@@ -23,7 +23,6 @@ public class Octo : Killable {
     }
 
 
-
     private void Start() {
         controller = GetComponent<CharacterController2D>();
         animator = GetComponent<Animator>();
@@ -72,6 +71,8 @@ public class Octo : Killable {
         animator.SetTrigger("attack");
         //shoot
         Debug.Log("SHOOTING: " + direction);
+        GameObject.Instantiate(projectile, transform.position + direction.normalized, Quaternion.identity);
+        projectile.GetComponent<Projectile>().direction = direction;
         //reset timer
         nextShoot = Time.time + shootCooldown;
     }

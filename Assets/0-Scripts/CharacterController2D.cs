@@ -12,7 +12,7 @@ public class CharacterController2D : MonoBehaviour {
 
     public bool rotable = false;
 
-    public Vector2 direction;
+    public Vector3 direction;
 
     #region Private Variables
     private Rigidbody2D rigid;

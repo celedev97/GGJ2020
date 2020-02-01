@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
-public class LinkToLevel : MonoBehaviour {
+public class OnDestroyLoadScene : MonoBehaviour
+{
     public string scene_name;
     public string spawnID;
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnDestroy() {
         Game.loadScene(scene_name, spawnID);
     }
 

@@ -148,7 +148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5613791025691924104}
   - component: {fileID: -7147984948340046787}
-  - component: {fileID: 401486255644929567}
   - component: {fileID: 7701302823886318863}
   - component: {fileID: 7105898029256911041}
   - component: {fileID: 738320077416399599}
@@ -191,23 +190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  attackCooldown: 1
   sword_hitbox_up: {fileID: 2274169145080954582}
   sword_hitbox_down: {fileID: 1822320069677546794}
   sword_hitbox_left: {fileID: 1503454000234479431}
   sword_hitbox_right: {fileID: 7524611803992470491}
---- !u!114 &401486255644929567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5633638012364711219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb83d85c79e9469f0d5c46b97b9fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCooldown: 1
 --- !u!114 &7701302823886318863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +210,7 @@ MonoBehaviour:
   speed: 3
   canMove: 1
   rotable: 0
-  direction: {x: 0, y: 0}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!58 &7105898029256911041
 CircleCollider2D:
   m_ObjectHideFlags: 0
