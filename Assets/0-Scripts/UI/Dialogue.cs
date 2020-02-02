@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class Dialogue : MonoBehaviour {
 
-    public SerializableEvent afterDialogueEvent;
+    public SerializableEvent[] afterDialogueEvent;
 
     public string[] dialogues;
 
@@ -28,7 +28,9 @@ public class Dialogue : MonoBehaviour {
             if (index < dialogues.Length) {
                 return dialogues[index++];
             }
-            afterDialogueEvent.Invoke();
+            foreach (SerializableEvent evt in afterDialogueEvent) {
+                evt.Invoke();
+            }
             Reset();
             return null;
         }
