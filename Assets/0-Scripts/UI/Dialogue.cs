@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour {
 
@@ -64,6 +65,21 @@ public class Dialogue : MonoBehaviour {
 
     public void DestroyObject(UnityEngine.Object obj) {
         GameObject.Destroy(obj);
+    }
+
+    public void playerDestroy() {
+        GameObject.Destroy(Player.gameObject);
+        Player.player = null;
+        Player.gameObject = null;
+    }
+
+    public void loadSceneAfterDelay(string sceneName, int delay) {
+        StartCoroutine(LoadSceneCoroutine(sceneName, delay));
+    }
+
+    IEnumerator LoadSceneCoroutine(string sceneName, int delay) {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 
 
