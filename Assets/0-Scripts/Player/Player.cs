@@ -178,7 +178,7 @@ public class Player : Killable {
                     //creating the bow in the player direction, moved of .5, destroying after .5s
                     GameObject bow = GameObject.Instantiate(
                             bow_prefab,
-                            transform.position + controller.direction,
+                            transform.position + controller.direction * .5f,
                             Quaternion.FromToRotation(Vector3.right, controller.direction)
                             ) as GameObject;
                     bow.transform.parent = transform;
