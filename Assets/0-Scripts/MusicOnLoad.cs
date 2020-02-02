@@ -8,5 +8,6 @@ public class MusicOnLoad : MonoBehaviour
     void Start()
     {
         Player.gameObject.GetComponent<AudioSource>().clip = music;
+        Player.gameObject.GetComponent<AudioSource>().Play();
     }
 }
