@@ -196,7 +196,7 @@ public class Player : Killable {
 
                 #region BOMB
                 case Weapon.BOMB:
-                    GameObject.Instantiate(bomb_prefab, transform.position + controller.direction * .5f, Quaternion.identity);
+                    GameObject.Instantiate(bomb_prefab, transform.position, Quaternion.identity);
                     break;
                 #endregion
 
