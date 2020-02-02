@@ -24,7 +24,7 @@ public class Killable : MonoBehaviour
             hp--;
             output = true;
             Debug.Log(gameObject.name + " has been hit by "+ collision.name);
-            collision.enabled = false;
+            //collision.enabled = false;
             if (hp == 0) {
                 Debug.Log(gameObject + " dead!");
 
