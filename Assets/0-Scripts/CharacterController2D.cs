@@ -31,7 +31,13 @@ public class CharacterController2D : MonoBehaviour {
             //normalizing vector (avoid diagonal faster movement, and ignore input smoothing)
             moveDirection = moveDirection.normalized;
 
-            direction = moveDirection;
+            //make direction 4way (so the controller always has a vector that can be used for shooting)
+            if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.y)) {
+                direction = new Vector2(moveDirection.x, 0).normalized;
+            } else {
+                direction = new Vector2(0, moveDirection.y).normalized;
+            }
+
             //turn character in the right direction
             Turn(moveDirection);
         }
