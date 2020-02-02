@@ -398,9 +398,9 @@ MonoBehaviour:
     dirty: 0
   dialogues:
   - YOU OBTAINED THE "BOBM"
-  - This bomb fixes things instead of breaking them
-  - Fix the chicken that holds this game togheter to
-  - Finally fix this game!
+  - THIS BOMB FIXES THINGS INSTEAD OF BREAKING THEM
+  - FIX THE CHICKEN THAT HOLDS THIS GAME TOGETHER TO
+  - FINALLY FIX THIS GAME!
 --- !u!61 &443642550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -463,8 +463,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -801943467
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e878a932dcaae42beaf50b5288bbee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2955,7 +2955,7 @@ MonoBehaviour:
       PublicKeyToken=null
     dirty: 0
   dialogues:
-  - Hai riparato l'ARCO
+  - YOU FIXED THE ARCO
 --- !u!114 &1206652827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2975,7 +2975,7 @@ MonoBehaviour:
   alteredSprite: {fileID: 21300000, guid: f979e4b3df8fdf94b9b411523ef26384, type: 3}
   destroyOnOK: {fileID: 95656147}
   loadOnNotOK:
-  - {fileID: 122029253862655938, guid: 6168cf226cc4c234a86c1aa8bd606400, type: 3}
+  - {fileID: 2168303926303426870, guid: 6168cf226cc4c234a86c1aa8bd606400, type: 3}
 --- !u!4 &1206652828
 Transform:
   m_ObjectHideFlags: 0
