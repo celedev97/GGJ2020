@@ -11,38 +11,6 @@ public class Game : MonoBehaviour {
         Debug.Log("SOUND: " + path);
     }
 
-    public void playSound(string path) {
-        PlaySound(path);
-    }
-
-    public static void SaveVariable(string variable_name, object value) {
-        variables[variable_name] = value;
-    }
-
-    public void saveVariable(string variable_name, object value) {
-        SaveVariable(variable_name, value);
-    }
-
-    public static object GetVariable(string variable_name) {
-        if (variables.ContainsKey(variable_name)) {
-            return variables[variable_name];
-        } else {
-            return null;
-        }
-    }
-
-    public object getVariable(string variable_name) {
-        return GetVariable(variable_name);
-    }
-
-    private static string lastLog = "";
-    internal static void Log(string log) {
-        if (log != lastLog) {
-            Debug.Log(log);
-            lastLog = log;
-        }
-    }
-
     public static bool AnimatorHasParameter(Animator animator, string paramName) {
         foreach (AnimatorControllerParameter param in animator.parameters) {
             if (param.name == paramName)
@@ -50,6 +18,7 @@ public class Game : MonoBehaviour {
         }
         return false;
     }
+
     #region Scene loading with teleport
     private static string spawnID;
     public static void loadScene(string sceneName, string spawn_point = "") {

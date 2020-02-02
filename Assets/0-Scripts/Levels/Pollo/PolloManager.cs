@@ -17,7 +17,7 @@ public class PolloManager : MonoBehaviour
             nextChickenCheck = Time.time + chickenCheckTimer;
 
             bool rotationOk = true;
-
+                                                                                                                                                                                                                      
             for (int i = 0; i < transform.childCount; i++) {
                 if (transform.GetChild(i).rotation.eulerAngles.x != 0) {
                     rotationOk = false;
