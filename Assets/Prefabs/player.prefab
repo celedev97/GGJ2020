@@ -374,6 +374,14 @@ MonoBehaviour:
   sword_hitbox_down: {fileID: 1822320069677546794}
   sword_hitbox_left: {fileID: 1503454000234479431}
   sword_hitbox_right: {fileID: 7524611803992470491}
+  bwo_prefab: {fileID: 7529442547120726295, guid: ff145de5622076d4eaabde892b20fe36,
+    type: 3}
+  bow_prefab: {fileID: 5392631246529873171, guid: 269ba6d5ac5d65947a0a0285f42cb75a,
+    type: 3}
+  arrow_prefab: {fileID: 2580787753920077815, guid: 89ab1bccd64d156458e98f78e4f56f15,
+    type: 3}
+  bomb_prefab: {fileID: 8752194689008198981, guid: 2d0ba9f22e20b654892b044da0eebe88,
+    type: 3}
 --- !u!114 &7701302823886318863
 MonoBehaviour:
   m_ObjectHideFlags: 0

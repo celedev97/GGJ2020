@@ -18,9 +18,11 @@ public class Killable : MonoBehaviour
         checkHit(collision);
     }
 
-    private void checkHit(Collider2D collision) {
+    protected virtual bool checkHit(Collider2D collision) {
+        bool output = false;
         if (collision.tag == "Damage" && gameObject.layer != collision.gameObject.layer) {
             hp--;
+            output = true;
             Debug.Log(gameObject.name + " has been hit by "+ collision.name);
             collision.enabled = false;
             if (hp == 0) {
@@ -40,15 +42,16 @@ public class Killable : MonoBehaviour
                             script.enabled = false;
                         }
 
-                        return;
+                        return output;
                     }
                 }
 
                 //destroying instantly if it wasn't possible to trigger death animation
                 Destroy(gameObject);
-
             }
         }
+
+        return output;
     }
 
 }

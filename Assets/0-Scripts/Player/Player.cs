@@ -4,8 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : Killable {
+    protected override bool checkHit(Collider2D collision) {
+        bool hit = base.checkHit(collision);
+        if (hit) ScreenOverlay.updateHealthStatus(hp);
+        return hit;
+    }
+
     #region Static utilities
-    //this is useful so the other class can do Player.gameObject and .player without having a reference to me
+        //this is useful so the other class can do Player.gameObject and .player without having a reference to me
     [HideInInspector]
     public new static GameObject gameObject;
     public static Player player;
@@ -49,7 +55,8 @@ public class Player : Killable {
         NONE,
         SWORD,
         BWO,
-        BOW
+        BOW,
+        BOMB
     }
 
 
@@ -64,6 +71,12 @@ public class Player : Killable {
     public Collider2D sword_hitbox_down;
     public Collider2D sword_hitbox_left;
     public Collider2D sword_hitbox_right;
+
+    public GameObject bwo_prefab;
+    public GameObject bow_prefab;
+    public GameObject arrow_prefab;
+
+    public GameObject bomb_prefab;
 
     #endregion
 
@@ -122,6 +135,7 @@ public class Player : Killable {
         if (Input.GetButtonDown("Jump") && !dialogue && canAttack) {
             nextAttackTime = Time.time + attackCooldown;
             switch (weapon) {
+                #region SWORD
                 case Weapon.SWORD:
                     animator.SetTrigger("attack");
 
@@ -137,38 +151,55 @@ public class Player : Killable {
 
                     StartCoroutine(deactivateSwordHitBoxes());
                     break;
+                #endregion
 
+                #region BUGGED BOW
                 case Weapon.BWO:
+                    //creating the bow in the player direction, moved of .5, destroying after .5s
                     GameObject.Destroy(
                         GameObject.Instantiate(
-                            Resources.Load("Prefabs/bwo"),
-                            transform.position + controller.direction*.5f,
+                            bwo_prefab,
+                            transform.position + controller.direction * .5f,
                             Quaternion.FromToRotation(Vector3.right, controller.direction)
                             ),
                         .5f
                     );
+                    //throwing the arrow in the player direction, with a random angle of -30/+30
                     GameObject arrwo =
                         GameObject.Instantiate(
-                            Resources.Load("Prefabs/arrow"),
+                            arrow_prefab,
                             transform.position + controller.direction,
                             Quaternion.FromToRotation(Vector3.up, controller.direction)) as GameObject;
-                    arrwo.GetComponent<Projectile>().direction = Quaternion.Euler(0, 0, Random.Range(-30, 31) )* controller.direction;
+                    arrwo.GetComponent<Projectile>().direction = Quaternion.Euler(0, 0, Random.Range(-30, 31)) * controller.direction;
                     break;
+                #endregion
+
+                #region BOW
                 case Weapon.BOW:
+                    //creating the bow in the player direction, moved of .5, destroying after .5s
                     GameObject bow = GameObject.Instantiate(
-                            Resources.Load("Prefabs/bow"),
+                            bow_prefab,
                             transform.position + controller.direction,
                             Quaternion.FromToRotation(Vector3.right, controller.direction)
                             ) as GameObject;
                     bow.transform.parent = transform;
-                    GameObject.Destroy(bow,.5f);
+                    GameObject.Destroy(bow, .5f);
+                    //throwing the arrow in the player direction
                     GameObject arrow =
                         GameObject.Instantiate(
-                            Resources.Load("Prefabs/arrow"),
+                            arrow_prefab,
                             transform.position + controller.direction * .5f,
                             Quaternion.FromToRotation(Vector3.up, controller.direction)) as GameObject;
                     arrow.GetComponent<Projectile>().direction = controller.direction;
                     break;
+                #endregion
+
+                #region BOMB
+                case Weapon.BOMB:
+                    GameObject.Instantiate(bomb_prefab, transform.position + controller.direction * .5f, Quaternion.identity);
+                    break;
+                #endregion
+
             }
         }
         #endregion
