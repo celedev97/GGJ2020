@@ -48,4 +48,23 @@ public class Dialogue : MonoBehaviour {
         Game.loadScene(sceneName, spawnPoint);
     }
 
+    public void playSound(AudioClip clip) {
+        GameObject sound = new GameObject();
+        AudioSource source = sound.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.Play();
+    }
+
+    public void playSound(String clip) {
+        GameObject sound = new GameObject();
+        AudioSource source = sound.AddComponent<AudioSource>();
+        source.clip = Resources.Load(clip) as AudioClip;
+        source.Play();
+    }
+
+    public void DestroyObject(UnityEngine.Object obj) {
+        GameObject.Destroy(obj);
+    }
+
+
 }

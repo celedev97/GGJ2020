@@ -2208,7 +2208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   afterDialogueEvent:
-    _target: {fileID: 1878710601}
+  - _target: {fileID: 1878710601}
     _methodName: changeWeapon
     _args:
     - boolValue: 0
@@ -2217,6 +2217,32 @@ MonoBehaviour:
       stringValue: SWORD
       objectValue: {fileID: 0}
       argType: 4
+    _dynamic: 0
+    _typeName: SerializableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    dirty: 0
+  - _target: {fileID: 1878710601}
+    _methodName: playSound
+    _args:
+    - boolValue: 0
+      intValue: 0
+      floatValue: 0
+      stringValue: 
+      objectValue: {fileID: 1878710597}
+      argType: 4
+    _dynamic: 0
+    _typeName: SerializableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    dirty: 0
+  - _target: {fileID: 1878710601}
+    _methodName: DestroyObject
+    _args:
+    - boolValue: 0
+      intValue: 0
+      floatValue: 0
+      stringValue: 
+      objectValue: {fileID: 1878710597}
+      argType: 5
     _dynamic: 0
     _typeName: SerializableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
