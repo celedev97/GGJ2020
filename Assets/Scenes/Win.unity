@@ -230,7 +230,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a171cd762148104283954f9fc937950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  afterDialogueEvent: []
+  afterDialogueEvent:
+  - _target: {fileID: 113801872}
+    _methodName: playerDestroy
+    _args: []
+    _dynamic: 0
+    _typeName: SerializableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    dirty: 0
+  - _target: {fileID: 113801872}
+    _methodName: loadSceneAfterDelay
+    _args:
+    - boolValue: 0
+      intValue: 0
+      floatValue: 0
+      stringValue: Splash
+      objectValue: {fileID: 0}
+      argType: 4
+    - boolValue: 0
+      intValue: 4
+      floatValue: 0
+      stringValue: 
+      objectValue: {fileID: 0}
+      argType: 2
+    _dynamic: 0
+    _typeName: SerializableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    dirty: 0
   dialogues:
   - HOORAY! YOU JUST FIXED THE GAME!
 --- !u!1 &997203088
