@@ -11,7 +11,7 @@ public class Player : Killable {
     }
 
     #region Static utilities
-        //this is useful so the other class can do Player.gameObject and .player without having a reference to me
+    //this is useful so the other class can do Player.gameObject and .player without having a reference to the real player
     [HideInInspector]
     public new static GameObject gameObject;
     public static Player player;
@@ -19,7 +19,12 @@ public class Player : Killable {
 
     #region Private useful components
     private CharacterController2D controller;
-    public Dialogue dialogue { get { return _dialogue; } 
+    private Animator animator;
+    #endregion
+
+    private Dialogue _dialogue = null;
+    public Dialogue dialogue {
+        get { return _dialogue; }
         set {
             _dialogue = value;
             if (value) {
@@ -30,27 +35,21 @@ public class Player : Killable {
                 //activating dialogue
                 ScreenOverlay.dialogueText.text = dialogue.next;
             } else {
-                //resuming
+                //resuming time
                 Time.timeScale = 1;
                 //turning off chatbox
                 ScreenOverlay.dialogue.SetActive(false);
             }
-            
+
         }
     }
-    public Dialogue _dialogue = null;
-    private Animator animator;
-    #endregion
 
     #region Input variables
     private Vector2 inputDirection;
 
     #endregion
 
-
-
     #region Attacks
-
     public enum Weapon {
         NONE,
         SWORD,
