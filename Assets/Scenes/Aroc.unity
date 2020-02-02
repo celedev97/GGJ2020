@@ -617,8 +617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   afterDialogueEvent: []
   dialogues:
-  - By killing the bugs you stopped the game self-implosion
-  - But now you have to fix it!
+  - BY KILLING THE BUGS YOU STOPPED THE GAME SELF-IMPLOSION
+  - BUT NOW YOU HAVE TO FIX IT!
 --- !u!1001 &673459312
 PrefabInstance:
   m_ObjectHideFlags: 0
