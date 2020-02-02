@@ -12,6 +12,17 @@ public class Dialogue : MonoBehaviour {
     public string[] dialogues;
 
     private int index = 0;
+
+    private void Start() {
+        //if this gameobject has a collider it means it's an NPC
+        if (!GetComponent<Collider2D>()) {
+            //if it doesn't it mean this is a random dialogue attached on nothing, so i'll assume this is a level-starting dialogue
+            Player.player.dialogue = this;
+        }
+
+    }
+
+
     public string next {
         get {
             if (index < dialogues.Length) {
