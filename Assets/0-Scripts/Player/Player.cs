@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class Player : Killable {
     protected override bool checkHit(Collider2D collision) {
         bool hit = base.checkHit(collision);
-        if (hit) ScreenOverlay.updateHealthStatus(hp);
+        if (hit)
+        {
+            
+            ScreenOverlay.updateHealthStatus(hp);
+        }
         return hit;
     }
 
@@ -98,12 +102,7 @@ public class Player : Killable {
 
     private void OnDestroy() {
         if (base.gameObject == Player.gameObject) {
-            //the main player has been destroyed, closing the game
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+           SceneManager.LoadScene("Death");
         }
     }
 

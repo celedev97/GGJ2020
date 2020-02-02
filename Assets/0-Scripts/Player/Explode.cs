@@ -20,6 +20,7 @@ public class Explode : MonoBehaviour {
         if (Time.time > explosionTimer) {
             explosionTimer = float.MaxValue;
             GetComponent<Collider2D>().enabled = true;
+            GetComponent<AudioSource>().Play();
         }
         if (Time.time > deleteTimer) {
             Destroy(gameObject);
