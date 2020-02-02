@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3785772397640754360}
   - component: {fileID: 58605095665929240}
   - component: {fileID: 1388610410455859269}
-  m_Layer: 0
+  - component: {fileID: 1872452418}
+  m_Layer: 12
   m_Name: pollo_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +110,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1872452418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491711547164606058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &567396800927818242
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +134,8 @@ GameObject:
   - component: {fileID: 4890903513872775539}
   - component: {fileID: 6259401151479400965}
   - component: {fileID: 1388610410455859275}
-  m_Layer: 0
+  - component: {fileID: 988049928}
+  m_Layer: 12
   m_Name: pollo_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,6 +233,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &988049928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567396800927818242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &1739561305485427005
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +257,8 @@ GameObject:
   - component: {fileID: 8813159183683001928}
   - component: {fileID: 7329193290348249941}
   - component: {fileID: 1388610410455859273}
-  m_Layer: 0
+  - component: {fileID: 1492618719}
+  m_Layer: 12
   m_Name: pollo_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,6 +356,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1492618719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739561305485427005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &1836845690036353491
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +380,8 @@ GameObject:
   - component: {fileID: 9101129622846039129}
   - component: {fileID: 7441206127557220566}
   - component: {fileID: 1388610410455859279}
-  m_Layer: 0
+  - component: {fileID: 1934232657}
+  m_Layer: 12
   m_Name: pollo_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,6 +479,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1934232657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836845690036353491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &2072154372609157962
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +503,8 @@ GameObject:
   - component: {fileID: 7263317995586595931}
   - component: {fileID: 7736195314894267644}
   - component: {fileID: 1388610410455859266}
-  m_Layer: 0
+  - component: {fileID: 1507139457}
+  m_Layer: 12
   m_Name: pollo_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,6 +602,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1507139457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072154372609157962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &2230116657448928825
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +626,8 @@ GameObject:
   - component: {fileID: 5646716850481971645}
   - component: {fileID: 6769232143400631373}
   - component: {fileID: 1388610410455859265}
-  m_Layer: 0
+  - component: {fileID: 1199106276}
+  m_Layer: 12
   m_Name: pollo_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,6 +725,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1199106276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230116657448928825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &3347633158755295268
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +749,8 @@ GameObject:
   - component: {fileID: 6170269645036635462}
   - component: {fileID: 9173283879205629531}
   - component: {fileID: 1388610410455859278}
-  m_Layer: 0
+  - component: {fileID: 51367330}
+  m_Layer: 12
   m_Name: pollo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,6 +848,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &51367330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347633158755295268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &4193758396594726064
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +934,8 @@ GameObject:
   - component: {fileID: 1572230695862243321}
   - component: {fileID: 776786370045882561}
   - component: {fileID: 1388610410455859267}
-  m_Layer: 0
+  - component: {fileID: 2128171765}
+  m_Layer: 12
   m_Name: pollo_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,6 +1033,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2128171765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622148759864447015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &4660255918801642582
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1057,8 @@ GameObject:
   - component: {fileID: 1302087327814436899}
   - component: {fileID: 329332498157036857}
   - component: {fileID: 1388610410455859274}
-  m_Layer: 0
+  - component: {fileID: 1646312375}
+  m_Layer: 12
   m_Name: pollo_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,6 +1156,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1646312375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660255918801642582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &5669751442622664870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1180,8 @@ GameObject:
   - component: {fileID: 8042580277881959019}
   - component: {fileID: 768397209901746595}
   - component: {fileID: 1388610410455859272}
-  m_Layer: 0
+  - component: {fileID: 1301087120}
+  m_Layer: 12
   m_Name: pollo_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,6 +1279,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1301087120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669751442622664870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &6534368645202686568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1303,8 @@ GameObject:
   - component: {fileID: 6684028701513253361}
   - component: {fileID: 7627461059473670858}
   - component: {fileID: 1388610410455859264}
-  m_Layer: 0
+  - component: {fileID: 331370439}
+  m_Layer: 12
   m_Name: pollo_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,6 +1402,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &331370439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534368645202686568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &6863205453986466987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1426,8 @@ GameObject:
   - component: {fileID: 7947335108381805576}
   - component: {fileID: 4109921472254188051}
   - component: {fileID: 1388610410455859277}
-  m_Layer: 0
+  - component: {fileID: 869229352}
+  m_Layer: 12
   m_Name: pollo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1370,6 +1525,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &869229352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863205453986466987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &6908201928885849258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,7 +1549,8 @@ GameObject:
   - component: {fileID: 1626260522224987986}
   - component: {fileID: 786344896380643567}
   - component: {fileID: 1388610410455859268}
-  m_Layer: 0
+  - component: {fileID: 291296114}
+  m_Layer: 12
   m_Name: pollo_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1479,6 +1648,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &291296114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908201928885849258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &8349389492621721525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1672,8 @@ GameObject:
   - component: {fileID: 2717128385523141391}
   - component: {fileID: 6956391249113116239}
   - component: {fileID: 1388610410455859270}
-  m_Layer: 0
+  - component: {fileID: 1596431854}
+  m_Layer: 12
   m_Name: pollo_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1588,6 +1771,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1596431854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349389492621721525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &8853912811747921749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1795,8 @@ GameObject:
   - component: {fileID: 2560038824664184158}
   - component: {fileID: 5969957557130631341}
   - component: {fileID: 1388610410455859276}
-  m_Layer: 0
+  - component: {fileID: 943888501}
+  m_Layer: 12
   m_Name: pollo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1697,6 +1894,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &943888501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853912811747921749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
 --- !u!1 &9146219971549787910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1918,8 @@ GameObject:
   - component: {fileID: 4326566618234265113}
   - component: {fileID: 1847145074385408605}
   - component: {fileID: 1388610410455859271}
-  m_Layer: 0
+  - component: {fileID: 1049080315}
+  m_Layer: 12
   m_Name: pollo_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1805,3 +2016,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1049080315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146219971549787910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746690e6efa53d049b81cd49a150786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10

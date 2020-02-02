@@ -14,8 +14,9 @@ public class Pollo_Tile : Killable
         bool hit = base.checkHit(collision);
         hp = 1000;
         if (hit) {
-            transform.rotation.eulerAngles.x += 90;
+            transform.Rotate(Vector3.forward, 90);
         }
+        return hit;
     }
 
     // Update is called once per frame
